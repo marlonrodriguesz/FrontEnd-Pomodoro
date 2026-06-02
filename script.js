@@ -82,6 +82,10 @@ const msgPomodoro  = document.getElementById('msgPomodoro');
 // ============================================================
 
 function renderizarCursos(lista) {
+  if (!gradeCursos) {
+    return;
+  }
+
   if (lista.length === 0) {
     gradeCursos.innerHTML = '<p class="sem-cursos">Nenhum curso encontrado.</p>';
     return;
@@ -146,7 +150,9 @@ function registrarEventosCards() {
       btnConcluir.disabled = true;
       card.classList.add('concluido');
 
-      contadorConcluidos.textContent = cursosConcluidos.length;
+      if (contadorConcluidos) {
+        contadorConcluidos.textContent = cursosConcluidos.length;
+      }
     });
 
     // Funcionalidade 4 — destaque visual ao passar o mouse
@@ -196,8 +202,12 @@ if (formInscricao) {
   formInscricao.addEventListener('submit', (evento) => {
     evento.preventDefault();
 
-    if (nomeInscricao.value.trim() === '' || emailInscricao.value.trim() === '') {
-      msgInscricao.textContent = 'Preencha nome e e-mail antes de se inscrever.';
+    if (
+      nomeInscricao.value.trim() === ''
+      || emailInscricao.value.trim() === ''
+      || cursoInscricao.value.trim() === ''
+    ) {
+      msgInscricao.textContent = 'Preencha todos os campos antes de se inscrever.';
       msgInscricao.className = 'mensagem-form mensagem-erro';
     } else {
       msgInscricao.textContent = `Inscrição realizada com sucesso! Bem-vindo(a), ${nomeInscricao.value.trim()}.`;
