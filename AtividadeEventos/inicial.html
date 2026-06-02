@@ -1,0 +1,77 @@
+<!-- Grupo: Kauã Reis, Marlon Daniel, Enzo Frade e Mateus de Oliveira -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método de Estudo Pomodoro</title>
+    <link rel="stylesheet" href="inicial.css">
+</head>
+<body>
+
+    <header>
+        <h1>Sessão Pomodoro de Estudo</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <a href="index.html">Login</a>
+            <a href="inicial.html">Início</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="inscricao.html">Inscrição Inicial</a>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section>
+
+            <h2>Registrar Sessão de Estudo (Pomodoro)</h2>
+
+            <form id="formPomodoro">
+
+                <div>
+                    <label for="materia">Matéria/Assunto:</label>
+                    <input type="text" id="materia" name="materia" required>
+                </div><br><br>
+
+                <div>
+                    <label for="data">Data da Sessão:</label>
+                    <input type="date" id="data" name="data" required>
+                </div><br><br>
+
+                <div>
+                    <label for="duracao">Duração (minutos):</label>
+                    <input type="number" id="duracao" name="duracao" min="1" required>
+                </div><br><br>
+
+                <div>
+                    <label for="ciclos">Quantidade de Pomodoros:</label>
+                    <input type="number" id="ciclos" name="ciclos" min="1" required>
+                </div><br><br>
+
+                <div>
+                    <label for="observacoes">Observações:</label>
+                    <input type="text" id="observacoes" name="observacoes">
+                </div><br><br>
+
+                <div>
+                    <button type="submit">Registrar Sessão</button>
+                    <button type="reset">Limpar</button>
+                </div>
+
+                <p id="msgPomodoro" class="mensagem-form"></p>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Método de Estudo Pomodoro para estudantes</p>
+        <p>Desenvolvido para controle de estudos</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

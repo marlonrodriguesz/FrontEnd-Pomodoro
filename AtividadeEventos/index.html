@@ -1,0 +1,49 @@
+<!-- Grupo: Kauã Reis, Marlon Daniel, Enzo Frade e Mateus de Oliveira -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <h1 class="login">LOGIN</h1>
+
+    <main style="text-align: center;">
+
+        <form action="dashboard.html" method="get">
+
+            <label for="nome">Digite seu nome: </label>
+            <input placeholder="Nome" type="text" name="nome" id="nome" required>
+            <br><br>
+
+            <label for="email">Digite seu E-mail: </label>
+            <input placeholder="E-mail" type="email" name="email" id="email" required>
+            <br><br>
+
+            <label for="password">Senha: </label>
+            <input placeholder="Senha" type="password" name="senha" id="senha" required>
+            <br><br>
+
+            <label for="idade">Digite sua idade: </label>
+            <input placeholder="0" type="number" name="idade" id="idade" required>
+            <br><br>
+
+            <label for="genero">Gênero</label>
+            <select name="genero" id="genero">
+                <option value="M">Masculino</option>
+                <option value="F">Feminino</option>
+                <option value="O">Outro</option>
+            </select>
+            <br><br>
+
+            <button type="submit">Entrar</button>
+            <button type="reset">Limpar</button>
+
+        </form>
+    </main>
+
+</body>
+</html>

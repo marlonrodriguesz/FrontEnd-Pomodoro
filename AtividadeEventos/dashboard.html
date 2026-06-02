@@ -1,0 +1,148 @@
+<!-- Grupo: Kauã Reis, Marlon Daniel, Enzo Frade e Mateus de Oliveira -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Prioridades</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+    <header>
+        <h1>Dashboard de Prioridades</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <a href="index.html">Login</a>
+            <a href="inicial.html">Início</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="inscricao.html">Inscrição Inicial</a>
+        </ul>
+    </nav>
+
+    <main>
+
+        <form id="formDashboard">
+
+            <fieldset>
+                <legend>TAREFAS DE HOJE</legend>
+
+                <article>
+                    <p>Ler capítulo de Direito Civil</p>
+                    <label>Status:</label>
+                    <select>
+                        <option>Não iniciado</option>
+                        <option>Em andamento</option>
+                        <option>Concluído</option>
+                    </select>
+                </article>
+
+                <article>
+                    <p>Trabalho de Penal</p>
+                    <label>Status:</label>
+                    <select>
+                        <option>Não iniciado</option>
+                        <option>Em andamento</option>
+                        <option>Concluído</option>
+                    </select>
+                </article>
+
+                <article>
+                    <p>Revisar anotações</p>
+                    <label>Status:</label>
+                    <select>
+                        <option>Não iniciado</option>
+                        <option>Em andamento</option>
+                        <option>Concluído</option>
+                    </select>
+                </article>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>DISCIPLINA</legend>
+
+                <article>
+                    <p>Direito Civil</p>
+                    <label>Concluido:</label>
+                    <select>
+                        <option>0%</option>
+                        <option>25%</option>
+                        <option>50%</option>
+                        <option>75%</option>
+                        <option>100%</option>
+                    </select>
+                </article>
+
+                <article>
+                    <p>Direito Penal</p>
+                    <label>Concluido:</label>
+                    <select>
+                        <option>0%</option>
+                        <option>25%</option>
+                        <option>50%</option>
+                        <option>75%</option>
+                        <option>100%</option>
+                    </select>
+                </article>
+
+                <article>
+                    <p>Constitucional</p>
+                    <label>Concluido:</label>
+                    <select>
+                        <option>0%</option>
+                        <option>25%</option>
+                        <option>50%</option>
+                        <option>75%</option>
+                        <option>100%</option>
+                    </select>
+                </article>
+
+            </fieldset>
+
+            <button type="submit">Salvar</button>
+            <button type="reset">Limpar</button>
+
+            <p id="msgDashboard" class="mensagem-form"></p>
+
+        </form>
+
+        <section class="secao-vitrine">
+
+            <h2>Vitrine de Cursos</h2>
+
+            <div class="secao-busca">
+                <input
+                    type="text"
+                    id="campoBusca"
+                    placeholder="Buscar curso..."
+                >
+                <select id="filtroCategoria">
+                    <option value="todos">Todas as categorias</option>
+                    <option value="direito">Direito</option>
+                    <option value="produtividade">Produtividade</option>
+                    <option value="tecnologia">Tecnologia</option>
+                </select>
+            </div>
+
+            <p class="contador-progresso">
+                Cursos concluídos: <span id="contadorConcluidos">0</span> de <span id="totalCursos">6</span>
+            </p>
+
+            <div id="gradeCursos" class="grade-cursos"></div>
+
+        </section>
+
+        
+
+    </main>
+
+    <footer class="rodapeDash">
+        <p>© 2026 - Sistema de Estudos | Grupo: Kauã Reis, Marlon Daniel, Enzo Frade e Mateus de Oliveira</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
